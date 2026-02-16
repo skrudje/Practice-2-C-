@@ -6,12 +6,12 @@ OBJ_DIR = build
 
 OBJS = $(OBJ_DIR)/main.o \
        $(OBJ_DIR)/crypto_math.o \
-       $(OBJ_DIR)/task1.o \
-       $(OBJ_DIR)/task2.o \
-       $(OBJ_DIR)/task3.o \
-       $(OBJ_DIR)/task4.o \
-       $(OBJ_DIR)/task5.o \
-       $(OBJ_DIR)/task6.o
+       $(OBJ_DIR)/Ferma.o \
+       $(OBJ_DIR)/Evklid.o \
+       $(OBJ_DIR)/ReverseElement.o \
+       $(OBJ_DIR)/Hellman.o \
+       $(OBJ_DIR)/Diofantovo.o \
+       $(OBJ_DIR)/Attack.o
 
 TARGET = pract2
 

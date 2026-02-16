@@ -1,9 +1,8 @@
 #include "tasks.h"
 #include "crypto_math.h"
 
-// 143a + 169b = 5
-void runTask5() {
-    cout << "\n--- Task 5: Диофантово уравнение (вариант 1) ---\n";
+void Diofantovo() {
+    cout << "\n    Task 5: Диофантово уравнение (вариант 1)    \n";
     cout << "Уравнение: Ax + By = C\n";
     
     mpz_class A, B, C;
@@ -26,7 +25,7 @@ void runTask5() {
     cout << "\nНОД(" << A << ", " << B << ") = " << g << "\n" << endl;
 
     if (C % g != 0) {
-        cout << "Решений в целых числах НЕТ (C не делится на НОД).\n\n";
+        cout << "Решений в целых числах нет (C не делится на нод).\n\n";
     } else {
         mpz_class mult = C / g;
         x *= mult;

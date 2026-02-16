@@ -1,14 +1,12 @@
 #ifndef CRYPTO_MATH_H
 #define CRYPTO_MATH_H
-
 #include <iostream>
 #include <gmpxx.h>
 
 using namespace std;
 
-// для результата расширенного евклида
 struct GCDResult {
-    mpz_class d; // нод
+    mpz_class d;
     mpz_class x;
     mpz_class y;
 };

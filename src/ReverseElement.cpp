@@ -1,8 +1,8 @@
 #include "tasks.h"
 #include "crypto_math.h"
 
-void runTask3() {
-    cout << "\n--- Task 3: Обратный элемент (C^-1 mod m) ---\n";
+void ReverseElement() {
+    cout << "\n   Task 3: Обратный элемент (c^-1 mod m)    \n";
     mpz_class c, m;
     cout << "Введите число C: "; cin >> c;
     cout << "Введите модуль m: "; cin >> m;

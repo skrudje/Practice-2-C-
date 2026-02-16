@@ -1,8 +1,8 @@
 #include "tasks.h"
 #include "crypto_math.h"
 
-void runTask4() {
-    cout << "\n--- Task 4: Диффи-Хеллман (вариант 1) ---\n";
+void Hellman() {
+    cout << "\n   Task 4: Диффи-Хеллман (вариант 1)   \n";
     
     mpz_class p, g, a_priv, b_priv;
     
@@ -18,7 +18,6 @@ void runTask4() {
     cout << "Публичный ключ Alice: " << A_pub << endl;
     cout << "Публичный ключ Bob: " << B_pub << "\n" << endl;
 
-    // вычисление общего секрета
     mpz_class sec_A = powerMod(B_pub, a_priv, p);
     mpz_class sec_B = powerMod(A_pub, b_priv, p);
 

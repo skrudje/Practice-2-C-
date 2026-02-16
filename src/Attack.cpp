@@ -1,8 +1,8 @@
 #include "tasks.h"
 #include "crypto_math.h"
 
-void runTask6() {
-    cout << "\n--- Task 6: Атака Man-In-The-Middle (MITM) ---\n";
+void Attack() {
+    cout << "\n    Task 6: Атака Man-In-The-Middle (MITM)    \n";
     cout << "Сценарий: Алиса и Боб пытаются обменяться ключами.\n";
     cout << "Ева перехватывает их сообщения и подменяет ключи.\n\n";
 
@@ -34,8 +34,8 @@ void runTask6() {
     cout << "\n!!! [Eva] ПЕРЕХВАТИЛА сообщение от Боба !!!\n";
     cout << "[Eva] Подменяет ключ B на свой ключ E = " << E_pub << " и отправляет Алисе.\n";
 
-    mpz_class secret_Eve_Alice = powerMod(A_pub, e_priv, p); // связь с Алисой
-    mpz_class secret_Eve_Bob = powerMod(B_pub, e_priv, p);   // связь с Бобом
+    mpz_class secret_Eve_Alice = powerMod(A_pub, e_priv, p);
+    mpz_class secret_Eve_Bob = powerMod(B_pub, e_priv, p); 
 
     cout << "\n[Alice] Получила ключ (думает что от Боба).\n";
     mpz_class secret_Alice_Eve = powerMod(E_pub, a_priv, p);

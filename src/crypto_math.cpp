@@ -1,6 +1,5 @@
 #include "crypto_math.h"
 
-// через разложение степени
 mpz_class powerMod(mpz_class base, mpz_class exp, mpz_class mod) {
     mpz_class res = 1;
     base %= mod;
@@ -12,7 +11,7 @@ mpz_class powerMod(mpz_class base, mpz_class exp, mpz_class mod) {
     return res;
 }
 
-// возвращает нод, а x и y меняет по ссылке
+// возврат нода, а x и y меняются по ссылке
 mpz_class gcdExtended(mpz_class a, mpz_class b, mpz_class &x, mpz_class &y) {
     if (a == 0) {
         x = 0;
@@ -26,19 +25,16 @@ mpz_class gcdExtended(mpz_class a, mpz_class b, mpz_class &x, mpz_class &y) {
     return d;
 }
 
-// проверка на простоту
 bool isPrime(mpz_class n) {
     return mpz_probab_prime_p(n.get_mpz_t(), 25) != 0;
 }
 
-// обратный элеменент
 mpz_class modInverse(mpz_class a, mpz_class m) {
     mpz_class x, y;
     mpz_class g = gcdExtended(a, m, x, y);
     if (g != 1) {
         return -1;
     }
-    // приводим x к положительному значению по модулю m
     mpz_class res = (x % m + m) % m;
     return res;
 }

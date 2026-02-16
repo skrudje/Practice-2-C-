@@ -16,12 +16,12 @@ int main() {
         cin >> choice;
 
         switch(choice) {
-            case 1: runTask1(); break;
-            case 2: runTask2(); break;
-            case 3: runTask3(); break;
-            case 4: runTask4(); break;
-            case 5: runTask5(); break;
-            case 6: runTask6(); break;
+            case 1: Ferma(); break;
+            case 2: Evklid(); break;
+            case 3: ReverseElement(); break;
+            case 4: Hellman(); break;
+            case 5: Diofantovo(); break;
+            case 6: Attack(); break;
             case 0: return 0;
             default: cout << "Неверный ввод.\n";
         }
